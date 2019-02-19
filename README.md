@@ -1,1 +1,1 @@
-[Website](https://lfoscari.github.io/map-center/)
+[Website](https://lfoscari.github.io/map-center/index.html)
