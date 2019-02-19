@@ -1,0 +1,99 @@
+html {
+  box-sizing: border-box;
+  line-height: 1; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+html,
+body,
+#app,
+#map {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0; }
+
+html, body, h1, h2, h3, h4, h5, h6, li, a {
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+
+input, input::placeholder {
+  font-size: 1rem;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+
+#map {
+  z-index: 0; }
+
+ul {
+  margin: 0; }
+
+.interface {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  right: 2rem;
+  z-index: 5; }
+  .interface form {
+    text-align: center;
+    margin: 1rem; }
+    .interface form input {
+      margin: 0 auto;
+      display: block;
+      width: 25rem;
+      max-width: 100%;
+      padding: 1rem 1.5rem;
+      border: none;
+      background-color: white;
+      opacity: 1;
+      box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+      border-radius: 30px;
+      transition: .5s opacity; }
+      .interface form input:focus {
+        opacity: 0.8; }
+    .interface form span {
+      display: inline-block;
+      margin: 1rem auto 1rem auto;
+      color: rgba(255, 40, 40, 0.5); }
+
+@media screen and (max-width: 45rem) {
+  .data {
+    display: none; } }
+.data {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 4; }
+  .data ul {
+    margin: 0;
+    padding: 2rem;
+    list-style: none;
+    max-width: 25rem;
+    float: left; }
+  .data .center {
+    background-color: #fcca46; }
+    .data .center:hover {
+      background-color: #fcca46; }
+  .data li {
+    position: relative;
+    margin-bottom: .5rem;
+    padding: .8rem 2rem .8rem 1rem;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+    background-color: rgba(63, 177, 206, 0.8);
+    color: white;
+    border-radius: 5px;
+    transition: .25s background-color; }
+    .data li:hover {
+      background-color: #3fb1ce; }
+    .data li span {
+      font-family: monospace;
+      font-size: 1.2rem; }
+      .data li span.small {
+        font-size: .8rem; }
+      .data li span.close {
+        cursor: pointer;
+        position: absolute;
+        right: .8rem;
+        top: .8rem; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Maps</title>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <div id="app">
+
+      <div class="interface">
+        <form v-on:submit.prevent="getAddress">
+          <span v-if="alert != ''">{{ alert }}</span>
+          <input type="text" name="address" v-model:value="address" placeholder="Address">
+        </form>
+      </div>
+
+      <div class="data">
+        <ul>
+          <li v-for="pos in coordinates">
+            {{ pos.name }}<br><span class="small">{{ pos.lat.toFixed(3) }} - {{ pos.lng.toFixed(3) }}</span>
+            <span v-on:click="removeAddress(pos)" class="close">×</span>
+          </li>
+          <li v-if="this.coordinates.length > 1" class="center">
+            Center: {{ centerPoint[0].toFixed(3) }} - {{ centerPoint[1].toFixed(3) }}
+          </li>
+        </ul>
+      </div>
+
+      <div id="map"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.js"></script>
+    <script src="magic.js" charset="utf-8"></script>
+  </body>
+</html>

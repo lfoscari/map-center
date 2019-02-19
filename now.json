@@ -1,0 +1,9 @@
+{
+  "version": 2,
+	"name": "map_center",
+	"builds": [
+		{ "src": "index.html", "use": "@now/static" },
+		{ "src": "style.css", "use": "@now/static" },
+    { "src": "magic.js", "use": "@now/static" }
+  ]
+}

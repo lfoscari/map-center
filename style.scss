@@ -1,0 +1,134 @@
+html {
+  box-sizing: border-box;
+  line-height: 1;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html,
+body,
+#app,
+#map {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, h1, h2, h3, h4, h5, h6, li, a {
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+input, input::placeholder {
+  font-size: 1rem;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+#map {
+  z-index: 0;
+}
+
+ul {
+  margin: 0;
+}
+
+$shadow: 0 4px 6px rgba(50,50,93,.11),0 1px 3px rgba(0,0,0,.08);
+
+.interface {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  right: 2rem;
+  z-index: 5;
+
+  form {
+    text-align: center;
+    margin: 1rem;
+
+    input {
+      margin: 0 auto;
+      display: block;
+      width: 25rem;
+      max-width: 100%;
+      padding: 1rem 1.5rem;
+      border: none;
+      background-color: rgb(255, 255, 255);
+      opacity: 1;
+      box-shadow: $shadow;
+      border-radius: 30px;
+      transition: .5s opacity;
+
+      &:focus {
+        opacity: .8
+      }
+    }
+
+    span {
+      display: inline-block;
+      margin: 1rem auto 1rem auto;
+      color: rgba(255, 40, 40, .5);
+    }
+  }
+}
+
+@media screen and (max-width: 45rem) {
+  .data {
+    display: none;
+  }
+}
+
+.data {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 4;
+
+  ul {
+    margin: 0;
+    padding: 2rem;
+    list-style: none;
+    max-width: 25rem;
+    float: left;
+  }
+
+  .center {
+    background-color: #fcca46;
+
+    &:hover {
+      background-color: #fcca46;
+    }
+  }
+
+  li {
+    position: relative;
+    margin-bottom: .5rem;
+    padding: .8rem 2rem .8rem 1rem;
+    box-shadow: $shadow;
+    background-color: rgba(63, 177, 206, .8);
+    color: white;
+    border-radius: 5px;
+    transition: .25s background-color;
+
+    &:hover {
+      background-color: rgba(63, 177, 206, 1);
+    }
+
+    span {
+      font-family: monospace;
+      font-size: 1.2rem;
+
+      &.small {
+        font-size: .8rem;
+      }
+
+      &.close {
+        cursor: pointer;
+        position: absolute;
+        right: .8rem;
+        top: .8rem;
+      }
+    }
+  }
+}
