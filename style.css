@@ -14,12 +14,11 @@ body,
   margin: 0;
   padding: 0; }
 
-html, body, h1, h2, h3, h4, h5, h6, li, a {
+html, body, h1, h2, h3, h4, h5, h6, li, a, input, input::placeholder {
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
 
 input, input::placeholder {
-  font-size: 1rem;
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+  font-size: 1rem; }
 
 #map {
   z-index: 0; }
@@ -56,13 +55,12 @@ ul {
       color: rgba(255, 40, 40, 0.5); }
 
 @media screen and (max-width: 45rem) {
-  .data {
+  .data li:not(.center) {
     display: none; } }
 .data {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
   z-index: 4; }
   .data ul {
     margin: 0;
@@ -72,8 +70,6 @@ ul {
     float: left; }
   .data .center {
     background-color: #fcca46; }
-    .data .center:hover {
-      background-color: #fcca46; }
   .data li {
     position: relative;
     margin-bottom: .5rem;
